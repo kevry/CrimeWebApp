@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CrimeNY</title>
+
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'mainstyle.css' %}">
+</head>
+<body>
+
+	<header>
+		<h1>Welcome to the New York City
+		Crime Lookout App</h1>
+	</header>
+
+    <p class="description">
+		Solely for the city of New York, this website will help determine the safest hours to travel around NYC given the location entered below.
+	</p>
+
+	<p class="credit">
+		Created by Kevin Delgado
+	</p>
+
+<div class="input">
+	<form action="result">
+		Enter Address: <input id = "pac-input" class="controls" type="text"
+		placeholder="Start typing here" name="curr_add">
+		<input type="submit" >
+		<div id="map-canvas"></div>
+	</form>
+</div>
+
+<script>
+	function activatePlacesSearch() {
+	var input = document.getElementById('pac-input');
+	var autocomplete = new google.maps.places.Autocomplete(input);
+	}
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places&callback=activatePlacesSearch"></script>
+
+</body>
+
+</html>

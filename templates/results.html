@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NYC Crime Data</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'resultstyle.css' %}">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+        <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+</head>
+
+
+<body>
+    <header class='final'>Current Location: {{address}}</header>
+
+<div class="output">
+    <p class="safetimes">
+         Be on the lookout and be cautious of your surroundings.
+        According to recent data, most crimes seem to occur around:
+    </p>
+
+    <ul class="times">
+        {% for time in final_times %}
+        <li class="rng">{{time}}</li>
+        {% endfor %}
+    </ul>
+
+    <p class="list">Specific crimes committed in this area include: </p>
+    <ul class="item">
+        {% for crimes in crimes_commit %}
+        <li class="single">{{crimes}}</li>
+        {% endfor %}
+    </ul>
+    <p class="legend">Red dots on map are the location of crime occurrances.</p>
+</div>
+
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: {{latitude}}, lng: {{longitude}}},
+          zoom: 16
+        });
+
+         {% for row in useful_info %}
+
+         var temp = {{row}};
+          // Add the circle for this city to the map.
+          var cityCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: {lat: temp[0], lng: temp[1]},
+            radius: 2
+          });
+
+          {% endfor %}
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+    async defer></script>
+
+</body>
+</html>
+

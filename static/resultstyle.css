@@ -1,0 +1,72 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Verdana";
+}
+
+header{
+background: white;
+padding: 30px;
+}
+
+body{
+background: rgb(34, 55, 96);
+}
+
+.output{
+color: white;
+float: left;
+width: 50%;
+padding: 10px;
+}
+
+.final{
+font-weight: bold;
+font-size: 14pt;
+color: Black;
+text-align: center;
+padding: 10px;
+}
+
+.output .safetimes{
+color: Tomato;
+text-align: center;
+}
+
+.output .times .rng{
+font-size: 12pt;
+padding: 2px;
+}
+
+.output .times{
+ color: white;
+padding-top: 10px;
+padding-left: 150px;
+}
+
+.output .list{
+color: Tomato;
+padding-top: 30px;
+padding-left: 20px;
+padding-bottom: 10px;
+}
+
+.output .item{
+ color: white;
+ padding-left: 70px;
+}
+
+.output .item .single{
+font-size: 8pt;
+padding-top: 1px;
+}
+
+.output .legend{
+color: Yellow;
+font-weight: bold;
+font-size: 10pt;
+text-align: center;
+padding-top: 30px;
+}
+

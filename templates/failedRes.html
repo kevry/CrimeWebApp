@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Failure</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'failedRes.css' %}">
+</head>
+<body>
+<img src="{% static 'errorSign.png' %}" alt="error image" class="center">
+
+<p class="notice">
+    Unfortunately, there are no results for this address. The address seems to be invalid.
+Please return to the main page and try again!
+</p>
+
+<div class="bt">
+      <form action="/">
+         <button class="return" type="submit">Return to Main Page</button>
+      </form>
+</div>
+
+</body>
+</html>

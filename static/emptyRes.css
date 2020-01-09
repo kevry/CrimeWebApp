@@ -1,0 +1,19 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Verdana"
+}
+
+.statement {
+background-color: rgb(181, 52, 24);
+color: white;
+text-align: center;
+font-size: 12pt;
+padding: 30px;
+}
+
+.output {
+text-align: center;
+padding: 10px;
+}

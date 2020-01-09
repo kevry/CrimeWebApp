@@ -1,0 +1,47 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Verdana"
+}
+
+header {
+background: rgb(34, 55, 96);
+padding: 45px;
+}
+
+header > h1{
+ color: Tomato;
+ text-align: center;
+ font-size: 30px;
+}
+
+body{
+background-color: rgb(240,240,240);
+}
+
+.input{
+text-align: center;
+padding: 20px;
+}
+
+.input .controls{
+font-size: 12pt;
+height: 30px;
+width: 600px;
+}
+
+.description{
+text-align: center;
+padding: 20px;
+}
+
+.credit{
+  font-weight: bold;
+  font-size: 9pt;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+

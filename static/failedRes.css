@@ -1,0 +1,39 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Verdana"
+}
+
+body{
+background: rgb(250,250,250);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  padding-top: 40px;
+}
+
+.notice {
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 70px;
+text-align: center;
+font-size: 12pt;
+}
+
+.bt .return
+{
+color: white;
+background-color: rgb(218, 39, 39);
+font-size: 12pt;
+}
+
+.bt{
+text-align: center;
+padding: 10px;
+}
